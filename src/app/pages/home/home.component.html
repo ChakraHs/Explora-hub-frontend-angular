@@ -1,0 +1,22 @@
+<div class="mx-auto d-flex justify-content-center flex-column align-items-center m-0 p-0">
+
+    <!-- Ajoutez le chemin vers votre image dans l'attribut src -->
+    <!-- <img [src]="homeImage" alt="Description de l'image" class="w-full mb-6 max-h-screen"> -->
+    <div class="homeImage row d-flex align-items-center justify-content-space-between">
+      <div class="p-5 flex flex-col absolute col-md-4" [ngStyle]="{'bottom':'35%','left': '10%'}">
+        <h1 [ngStyle]="{'font-size':'51px','font-weight':'500'}">ExploraHub</h1>
+        <h3 [ngStyle]="{'font-size':'20px'}">Exactly What You Need</h3>
+        <button
+        class="p-2 px-4 mt-3"
+        (click)="navigateTo('selection')" 
+        mat-raised-button 
+        [ngStyle]="{'background-color':'#638048','color':'#fff','font-weight':'600','border':'0'}">
+            Discover now
+        </button>
+      </div>
+        <div class="col-md-8 h-100 d-flex justify-content-end p-0 m-0 d-flex align-items-end">
+            <img class="img-home" src={{homeImage}} alt="">
+        </div>
+    </div>
+  </div>
+  

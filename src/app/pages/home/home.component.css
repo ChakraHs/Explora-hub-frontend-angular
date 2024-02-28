@@ -1,0 +1,19 @@
+
+.home{
+    background-color: #F5FAF9;
+}
+
+.homeImage{
+    /* background-size: cover; */
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    background-color: #F5FAF9;
+    padding-left: 50px;
+}
+
+.img-home{
+    height: 90%;
+}
+  

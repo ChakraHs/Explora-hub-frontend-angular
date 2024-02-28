@@ -1,0 +1,58 @@
+<!-- app.component.html -->
+<header>
+    <div class="container">
+        <div class="navbar">
+            <div class="brand">
+              <a class="cp d-flex align-items-end gap-2 " (click)="navigateTo('home')">
+                <img src="../../../assets/images/logologologo.png" alt="" height="50" class="p-0 m-0">
+                <!-- <img src="../../../assets/images/logotest.png" alt="" height="40" class="p-0 m-0"> -->
+                <h4 style="color: #638048;" class="fw-600 ">ExploraHub</h4>
+              </a>
+            </div>
+      
+            <nav class="pc-links d-flex align-items-center">
+              <ul class="d-flex align-items-center">
+                <li *ngFor="let navItem of navItems">
+                    <a class="cp" [class.active]="isActive(navItem.link)" routerLink="home" (click)="navigateTo(navItem.link)">
+                      {{ navItem.label }}
+                    </a>
+                  </li>
+              </ul>
+
+
+              <!-- <div class="language-selector d-flex gap-2">
+                <select class="fc-w language" id="language" [(ngModel)]="selectedLanguage" (change)="onLanguageChange($event)">
+                  <option value="en" class="p-0 m-0">
+                    EN
+                  </option>
+                  <option value="fr" class="p-0 m-0">FR</option>
+                  <option value="ar" class="p-0 m-0">العربية</option>
+                </select>
+                <div [ngClass]="['flag', 'flag-' + selectedLanguage]"></div>
+              </div> -->
+
+            </nav>
+      
+            <div class="menu" (click)="toggleMenu()">
+              <div class="bar"></div>
+              <div class="bar"></div>
+              <div class="bar"></div>
+            </div>
+            <nav *ngIf="isMenuOpen" class="menu-container">
+              <ul>
+                <li *ngFor="let navItem of navItems" (click)="closeMenu()">
+                  <!-- Conditionally render a button for 'Login' -->
+                  <button *ngIf="navItem.label == 'Login'">Login Button</button>
+                  
+                  <!-- Conditionally render a navigation link for other items -->
+                  <a *ngIf="navItem.label != 'Login'" routerLinkActive="active" routerLink="home" (click)="navigateTo(navItem.link)" class="cp">
+                    {{ 'Login' }}
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+    </div>
+    
+  </header>
+  
