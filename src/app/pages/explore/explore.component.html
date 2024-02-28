@@ -1,2 +1,25 @@
-<!-- test.component.html -->
-<div id="map" style="width: 100%; height: 400px;"></div>
+<div class="container">
+    <div class="row">
+      <div class="col-md-6 mt-3">
+        <div id="map" style="height: 400px;"></div>
+      </div>
+      <div class="col-md-6 mt-3">
+        <h2>Select Places</h2>
+        <ul class="place-list">
+            <li *ngFor="let place of placesInfo" class="place-item cp" [style.border]="isPlaceSelected(place.title) ? '2px solid black' : ''">
+                <div class="place-info" (click)="togglePlace(place.title)">
+                    <img src="{{ place.imageUrl }}" alt="{{ place.title }}" class="place-image">
+                    <div class="place-details">
+                        <h3>{{ place.title }}</h3>
+                        <p>{{ place.description }}</p>
+                    </div>
+                </div>
+                <!-- <input type="checkbox" [checked]="isPlaceSelected(place.title)"> -->
+            </li>
+        </ul>
+        <button (click)="calculateBestPath()">Next</button>
+    </div>
+    
+    </div>
+  </div>
+  
