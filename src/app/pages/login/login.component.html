@@ -1,0 +1,41 @@
+<div class="body">
+    <form action="#" class="login-form">
+        <h1 class="login-title">{{login? "Login" : "Register"}}</h1>
+    
+        <div class="input-box" *ngIf="!login">
+            <i class='bx bxs-user'></i>
+            <input type="text" placeholder="First name">
+        </div>
+        <div class="input-box" *ngIf="!login">
+            <i class='bx bxs-user'></i>
+            <input type="text" placeholder="Last name">
+        </div>
+        <div class="input-box">
+            <i class='bx bxs-user'></i>
+            <input type="text" placeholder="mail">
+        </div>
+        <div class="input-box">
+            <i class='bx bxs-user'></i>
+            <input type="password" placeholder="password">
+        </div>
+        <div class="input-box" *ngIf="!login">
+            <i class='bx bxs-lock-alt'></i>
+            <input type="password" placeholder="Confirm password">
+        </div>
+    
+        <div class="remember-forgot-box" *ngIf="login">
+            <label for="remember">
+                <input type="checkbox" id="remember">
+                Remember me
+            </label>
+            <a href="#">Forgot Password?</a>
+        </div>
+    
+        <button class="login-btn">{{login? "Login" : "Register"}}</button>
+    
+        <p class="register">
+            {{login ? "Don't have an account?": "Does have an account?"}}
+            <a  (click)="navigate()">{{login ? "Register": "Login"}}</a>
+        </p>
+    </form>    
+</div>
