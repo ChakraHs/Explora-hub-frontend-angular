@@ -7,12 +7,12 @@
           <span>Food</span>
         </div>
       </a>
-      <a class="col-md-3 h-a" routerLink="/map" queryParams="{ type: 'places' }">
+      <a (click)="navigateTo('explore')" class="col-md-3 h-a" routerLink="/explore" queryParams="{ type: 'places' }">
         <div class="card places">
           <span>Places</span>
         </div>
       </a>
-      <a class="col-md-3 h-a" routerLink="/map" queryParams="{ type: 'trips' }">
+      <a (click)="navigateTo('explore')" class="col-md-3 h-a" routerLink="/explore" queryParams="{ type: 'trips' }">
         <div class="card trips">
           <span>Trips</span>
         </div>
