@@ -42,7 +42,7 @@
               <ul>
                 <li *ngFor="let navItem of navItems" (click)="closeMenu()">
                   <!-- Conditionally render a button for 'Login' -->
-                  <button *ngIf="navItem.label == 'Login'">Login Button</button>
+                  <button *ngIf="navItem.label == 'Login'" routerLink="login">Login Button</button>
                   
                   <!-- Conditionally render a navigation link for other items -->
                   <a *ngIf="navItem.label != 'Login'" routerLinkActive="active" routerLink="home" (click)="navigateTo(navItem.link)" class="cp">

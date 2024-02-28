@@ -4,6 +4,8 @@ import { TestComponent } from './test/test.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ExploreComponent } from './pages/explore/explore.component';
 import { SelectionComponent } from './pages/selection/selection.component';
+import { LoginComponent } from './pages/login/login.component';
+import { PlacesComponent } from './pages/places/places.component';
 
 const routes: Routes = [
     {
@@ -21,6 +23,14 @@ const routes: Routes = [
     {
         path:"explore",
         component:ExploreComponent
+    },
+    {
+        path:"login",
+        component:LoginComponent
+    },
+    {
+        path:"places",
+        component:PlacesComponent
     },
 ];
 
