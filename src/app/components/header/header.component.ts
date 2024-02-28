@@ -76,7 +76,7 @@ export class HeaderComponent {
     // Find the "Login" item and update its label based on the session status
     const loginItemIndex = modifiedNavItems.findIndex(item => item.label === 'Login'|| item.label === 'Logout');
     if (loginItemIndex !== -1) {
-      modifiedNavItems[loginItemIndex].label = isAuthenticated ? 'Logout' : 'Login';
+      modifiedNavItems[loginItemIndex].label = isAuthenticated ? 'Login' : 'Login';
       // console.log("is authentified: ", isAuthenticated);
     }
 

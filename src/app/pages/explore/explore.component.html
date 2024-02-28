@@ -4,7 +4,7 @@
         <div id="map" style="height: 400px;"></div>
       </div>
       <div class="col-md-6 mt-3">
-        <h2>Select Places</h2>
+        <h2 class="mb-4" [ngStyle]="{'color':'#638048'}">Rabat city populars places</h2>
         <ul class="place-list">
             <li *ngFor="let place of placesInfo" class="place-item cp" [style.border]="isPlaceSelected(place.title) ? '2px solid black' : ''">
                 <div class="place-info" (click)="togglePlace(place.title)">
@@ -17,7 +17,15 @@
                 <!-- <input type="checkbox" [checked]="isPlaceSelected(place.title)"> -->
             </li>
         </ul>
-        <button (click)="calculateBestPath()">Next</button>
+        <button class="p-2 px-4 mb-4"
+        [ngStyle]="{'background-color':'#638048','color':'#fff','font-weight':'400','border':'0','margin-right':'20px'}"
+        (click)="calculateBestPath()">show best path</button>
+        <button class="p-2 px-4 mb-4"
+        [ngStyle]="{'background-color':'#638048','color':'#fff','font-weight':'400','border':'0'}"
+        >Reserve a guide</button>
+        <button class="p-2 px-4 mb-4"
+        [ngStyle]="{'background-color':'#638048','color':'#fff','font-weight':'400','border':'0'}"
+        >transport</button>
     </div>
     
     </div>

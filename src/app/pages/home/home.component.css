@@ -16,4 +16,16 @@
 .img-home{
     height: 90%;
 }
+
+@media screen and (max-width: 500px) {
+
+    .homeImage{
+        /* background-size: cover; */
+        height: 55vh;
+    }
+    .img-home {
+        height: auto;
+        width: 100vw;
+    }
+}
   

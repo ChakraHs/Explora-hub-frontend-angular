@@ -5,6 +5,7 @@
     gap: 20px;
     align-items: center;
     height: 80vh;
+    width: 100vw;
   }
   
   .card {
@@ -19,6 +20,7 @@
     color: #fff;
     cursor: pointer;
     transition: transform 0.3s ease;
+    margin: 0%;
   }
   
   .card:hover {
@@ -39,3 +41,12 @@
     background-image: url('../../../assets/img/trips.jpg');
     background-size: cover;
   }
+
+  @media screen and (max-width: 600px) {
+    .food{
+        margin-top: 30px;
+    }
+    .card{
+        margin-left: 10vw !important;
+    }
+}
