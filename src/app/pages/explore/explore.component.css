@@ -1,0 +1,28 @@
+.place-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.place-item {
+    margin-bottom: 20px;
+}
+
+.place-info {
+    display: flex;
+    align-items: center;
+}
+
+.place-image {
+    width: 80px; /* Adjust image width as needed */
+    height: 80px; /* Adjust image height as needed */
+    margin-right: 10px;
+}
+
+.place-details {
+    flex: 1;
+}
+
+/* Optional: Style checkbox */
+input[type="checkbox"] {
+    margin-left: 10px;
+}

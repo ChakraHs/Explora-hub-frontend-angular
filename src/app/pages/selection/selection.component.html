@@ -2,7 +2,7 @@
 <div class="w-100 row card-selection-container">
     <!-- <h2>Select a card:</h2> -->
     <div class="row w-100 card-buttons">
-      <a class="col-md-3 h-a" routerLink="/map" queryParams="{ type: 'food' }">
+      <a (click)="navigateTo('explore')" class="col-md-3 h-a" routerLink="/explore" queryParams="{ type: 'food' }">
         <div class="card food">
           <span>Food</span>
         </div>

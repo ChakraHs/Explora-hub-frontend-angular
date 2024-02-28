@@ -13,6 +13,10 @@ export class SelectionComponent {
   ngOnInit(): void {
   }
 
+  navigateTo(route: string): void {
+    this.router.navigate([route]);
+  }
+
   selectCard(cardType: string): void {
     // Assuming you have latitude, longitude, and description for each card type
     let data: any;
